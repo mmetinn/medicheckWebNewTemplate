@@ -18,8 +18,8 @@ function logincheck($u, $p) {
 if ( count($_POST) > 0) {
 
     if (isset($_POST['input_username']) && isset($_POST['input_user_password'])) {
-        $u = $_POST['input_username'];
-        $p = $_POST['input_user_password'];
+        $u = md5($_POST['input_username']);
+        $p = md5($_POST['input_user_password']);
         $user = logincheck($u, $p);// kullanıcı adı ve şifremizi bir değişkene atıp fonksiyona göderiyoruz.ve return edilen veriyi user değişkeninin içerisine atıyoruz.
         if ( $user ) {//user boş değilse.
             $_SESSION['user_id'] = $user['id'];

@@ -72,6 +72,16 @@ http://www.templatemo.com/tm-506-tinker
             background: purple;
           }
         </style>
+
+        <script type="text/javascript">
+        function godown ()
+        { document.getElementById("down").scrollIntoView(); // JUMP TO DIV "DOWN".
+        }
+        function gobottom ()
+        { document.getElementById("bottom").scrollIntoView(); // JUMP TO DIV "BOTTOM".
+        }
+        </script>
+
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -149,9 +159,10 @@ http://www.templatemo.com/tm-506-tinker
         <div class="container">
           <div class="row">
 
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <center>
                   <h1 style="color:black;">Hastanın Künyesi</h1>
-                  <table  id="tablo2" class="table table-bordered">
+
+                  <table style="width:90%" id="tablo2" class="table table-bordered">
                       <tr>
                           <td rowspan="2" >
                               <?php
@@ -185,9 +196,7 @@ http://www.templatemo.com/tm-506-tinker
 
 
                       </table>
-                  </div>
-                  <br><br>
-                  <br><br>
+                    </center>              
                   <marquee style="font-size: 25px;text-transform: uppercase;background: #999999;color: #ffffff" >Hasta Ölçüm Bilgileri</marquee>
                   <br>
                   <table id="olcumler" class='table table-bordered'>
@@ -706,7 +715,7 @@ http://www.templatemo.com/tm-506-tinker
 
 </div>
         </div>
-    </div>
+
     <div>
     <?php
     if(isset($_POST['degerler'])){
@@ -720,7 +729,8 @@ http://www.templatemo.com/tm-506-tinker
             //kitap ismini tablo olarak gösterir
     $res=mysqli_query($link, $sql);
 
-    echo "<table id='tablo' class='table table-bordered'>";
+    echo "<center>
+    <table style='width:90%' id='tablo' class='table table-bordered'>";
     echo "<tr>";
     echo "<th>"; echo "Ölçüm"; echo "</th>";
     echo "<th>"; echo "Açıklama"; echo "</th>";
@@ -755,7 +765,9 @@ http://www.templatemo.com/tm-506-tinker
     ?>
 
     </table>
+  </center>
     </div>
+  </div>
     <?php
     include "footer.php";
      ?>

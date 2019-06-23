@@ -237,6 +237,8 @@ http://www.templatemo.com/tm-506-tinker
                         mysqli_select_db($link,("medicheck"));*/
                         if($_POST[kullanici_adi]==$_POST[kullanici_adi_tekrar] && $_POST[sifre]==$_POST[sifre_tekrar]){
                         //  echo "<script> alert('sad');</script>";
+                        $md5_sifre=md5($_POST['sifre']);
+                        $md5_username=md5($_POST['kullanici_adi']);
                           mysqli_query($link,"insert into doktorlar
                           (doktor_adi,
                           doktor_soyadi,
@@ -247,8 +249,8 @@ http://www.templatemo.com/tm-506-tinker
                           doktor_tc) values(
                           '$_POST[ad]',
                           '$_POST[soyad]',
-                          '$_POST[kullanici_adi]',
-                          '$_POST[sifre]',
+                          '$md5_username',
+                          '$md5_sifre',
                           '$_POST[email]',
                           '$_POST[tel]',
                           '$_POST[tc]')");

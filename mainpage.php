@@ -57,7 +57,7 @@ http://www.templatemo.com/tm-506-tinker
           }
 
           .card {
-            width: 250px;                /* Set width of cards */
+            width: 500px;                /* Set width of cards */
             height: 300px;
             display: flex;                /* Children use Flexbox */
             flex-direction: column;       /* Rotate Axis */
@@ -202,7 +202,7 @@ http://www.templatemo.com/tm-506-tinker
                 </div>
               </td>
               <td>
-                <div class="card">
+               <!-- <div class="card">
                   <div class="card-header">Hasta Ölçümleri</div>
                   <div class="card-main">
                     <img src="img/measurement_icon.png" alt="">
@@ -219,9 +219,22 @@ http://www.templatemo.com/tm-506-tinker
                       <input type="submit" name="a"  value="messages">
 
                     </form>-->
-                  </div>
-                </div>
+                </div>-->
               </td>
+
+              <td>
+               <!-- <div class="card">
+                  <div class="card-header">Hastaların İlaçları</div>
+                  <div class="card-main">
+                    <img src="img/measurement_icon.png" alt="">
+                    <div class="main-description">Sisteminizde kayıtlı olan hastaların kullandıkları ilaçları görmek için tıklayınız.</div>
+                    <div class="primary-white-button">
+                        <a href="listmedicpage.php"> Gssssit </a>
+                    </div>
+                  </div>
+                </div>-->
+              </td>
+
             </tr>
           </table>
         </div>
